@@ -1,0 +1,10 @@
+group,employees,left,attrition_fraction,feature
+No,836,93,0.11124401913875598,OverTime
+Yes,340,97,0.2852941176470588,OverTime
+Human Resources,48,10,0.20833333333333334,Department
+Research & Development,764,104,0.13612565445026178,Department
+Sales,364,76,0.2087912087912088,Department
+1,240,53,0.22083333333333333,JobSatisfaction
+2,216,38,0.17592592592592593,JobSatisfaction
+3,354,58,0.1638418079096045,JobSatisfaction
+4,366,41,0.11202185792349727,JobSatisfaction

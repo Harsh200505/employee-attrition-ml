@@ -1,0 +1,12 @@
+.venv/
+.mlenv/
+__pycache__/
+.ipynb_checkpoints/
+.mplconfig/
+data/*.zip
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db

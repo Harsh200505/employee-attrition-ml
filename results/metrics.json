@@ -1,0 +1,49 @@
+{
+  "selected_model": "Logistic Regression",
+  "selection_metric": "training 5-fold average precision",
+  "seed": 42,
+  "threshold": 0.5,
+  "dataset_sha256": "a5c31e38bd7fafc9bc333884eb181b06b41b8e5e488e8f7ccb27199fb3be7659",
+  "python": "3.12.14",
+  "sklearn": "1.6.1",
+  "pandas": "2.2.3",
+  "numpy": "2.0.2",
+  "test_metrics": {
+    "Majority baseline": {
+      "accuracy": 0.8401360544217688,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "average_precision": 0.1598639455782313,
+      "confusion_matrix": [
+        [
+          247,
+          0
+        ],
+        [
+          47,
+          0
+        ]
+      ]
+    },
+    "Logistic Regression": {
+      "accuracy": 0.7619047619047619,
+      "precision": 0.35802469135802467,
+      "recall": 0.6170212765957447,
+      "f1": 0.453125,
+      "roc_auc": 0.7762081143940046,
+      "average_precision": 0.5325077226170596,
+      "confusion_matrix": [
+        [
+          195,
+          52
+        ],
+        [
+          18,
+          29
+        ]
+      ]
+    }
+  }
+}
