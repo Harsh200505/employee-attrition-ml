@@ -10,3 +10,5 @@ data/*.zip
 *.log
 .DS_Store
 Thumbs.db
+web_test_cases.json
+.vercel/

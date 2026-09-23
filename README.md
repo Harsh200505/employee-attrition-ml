@@ -4,6 +4,31 @@ A third-year undergraduate ML project using the IBM HR attrition dataset from Ka
 
 ## Start here
 
+## Deploy on Vercel
+
+Import this repository at https://vercel.com/new. Use **Other** as the framework,
+leave the root directory as the repository root, and deploy. `vercel.json` serves
+the committed `web/` directory without a build step or Python server.
+
+The hosted version displays saved experiment results and computes real predictions
+in the browser using the fitted Logistic Regression coefficients, original scaling,
+and one-hot encoding. Profile inputs stay in the browser. Model comparison retraining
+remains available in the local Python demo; the hosted comparison button opens the
+saved results instead of starting training.
+
+After changing the training data or model, regenerate and check the hosted files:
+
+```powershell
+.\.mlenv\Scripts\python.exe build_web.py
+node test_web.cjs
+```
+
+Commit the regenerated `web/` files before redeploying. The exporter deliberately
+fails if the selected model is no longer Logistic Regression. The test compares
+browser inference against Python for every training row and checks invalid inputs.
+
+## Local demonstration
+
 For a live faculty presentation, run `.\.mlenv\Scripts\python.exe demo.py` and open **http://127.0.0.1:8501**. The screen shows the dataset, runs the actual model comparison and supports predictions for hypothetical profiles. Read `FACULTY_DEMO.md` for a five-minute walkthrough. `RUN_DEMO.cmd` is a double-click launcher for this computer.
 
 Open `Employee_Attrition_Project.ipynb`. It contains explanations, executable code, saved results and charts. Start with the problem statement and class distribution, then follow the split, exploration, model comparison and final evaluation.
