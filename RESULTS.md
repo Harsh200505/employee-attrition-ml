@@ -36,7 +36,11 @@ The selected model and predefined baseline were evaluated at threshold 0.5. The 
 
 The selected model identified **29 of the 47 actual leavers**, missed 18 and incorrectly flagged 52 of the 247 employees who stayed. It correctly classified 195 stayers. Its lower accuracy than the baseline comes with detection of leavers, which the baseline misses entirely. The false-positive count is substantial, and this is a starting academic result rather than a deployable system.
 
-![Final test evaluation](results/test_evaluation.png)
+### Reading the test figure
+
+![Confusion matrix and precision-recall curve for the held-out Logistic Regression test](results/test_evaluation.png)
+
+In the confusion matrix, rows are actual labels and columns are predicted labels: 195 stayed/stayed, 52 stayed/left (false positives), 18 left/stayed (false negatives), and 29 left/left. Recall is 29 ÷ 47 = 61.7%; precision is 29 ÷ 81 = 35.8%. The curve shows the precision and recall tradeoff across score thresholds, whereas the matrix uses the fixed 0.5 threshold. Average precision (0.533 on test) summarizes ranking over that curve; it is distinct from precision at 0.5. The chart is a saved test result, not evidence of a fresh demo run.
 
 ## How to describe the project
 
