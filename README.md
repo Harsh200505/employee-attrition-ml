@@ -44,7 +44,7 @@ Open `Employee_Attrition_Project.ipynb`. It contains explanations, executable co
 
 ## Run on this computer
 
-From this `employee_turnover` folder:
+From the repository root:
 
 ```powershell
 .\.mlenv\Scripts\python.exe train.py
