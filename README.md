@@ -5,7 +5,7 @@ An educational classification project using the IBM HR attrition dataset from Ka
 ## Start here
 
 - **See the findings:** [Results and interpretation](RESULTS.md), including the confusion matrix and limitations.
-- **Explore the hosted demo:** deploy this repository using the instructions below. A verified public deployment URL is not recorded in this repository; add the actual URL here only after opening and checking it.
+- **Vercel PR preview:** [open the preview](https://employee-attrition-ml-git-docs-demo-and-resu-e270b6-harsh200505.vercel.app). Vercel reports the deployment Ready, but an unauthenticated visit on 29 September 2026 redirected to Vercel login. Public access and the interactive controls remain unverified; do not use this as a public portfolio link yet.
 - **Run the full experiment locally:** follow [Local demonstration](#local-demonstration) or the [five-minute faculty walkthrough](FACULTY_DEMO.md). The hosted comparison shows saved results; local Python can retrain.
 - **Read the method and code:** [notebook](Employee_Attrition_Project.ipynb) and [train.py](train.py).
 
@@ -30,7 +30,7 @@ After changing the training data or model, regenerate and check the hosted files
 node test_web.cjs
 ```
 
-Commit the regenerated `web/` files before redeploying. After deployment, open the assigned Vercel URL, check the comparison and a hypothetical prediction, and place that verified URL in the Start here section and your project profile. The exporter deliberately
+Commit the regenerated `web/` files before redeploying. After deployment, open the assigned Vercel URL in a signed-out browser, check the saved comparison and submit a hypothetical prediction. Add a public URL to your project profile only after all three checks succeed. This PR preview currently requires Vercel sign-in. The exporter deliberately
 fails if the selected model is no longer Logistic Regression. The test compares
 browser inference against Python for every training row and checks invalid inputs.
 
@@ -91,7 +91,7 @@ Capture screenshots from a running demo; do not present the saved chart as proof
 3. **Held-out evaluation:** show the confusion matrix and precision-recall curve, with the 29 detected leavers, 18 misses and 52 false alarms explained in the caption.
 4. **Hypothetical prediction:** submit a sample profile and show the model output. Label the score as an uncalibrated model score, not an employee's resignation probability.
 
-Save readable images in a `screenshots/` folder if you choose to commit them, and link them here with descriptive alt text. Crop personal browser details and any real employee information. The committed `results/test_evaluation.png` is a generated experiment figure, not a screenshot of the hosted application. The repository currently does not document a verified public demo URL or committed interface screenshots; avoid claiming either until added.
+Save readable images in a `screenshots/` folder if you choose to commit them, and link them here with descriptive alt text. Crop personal browser details and any real employee information. The committed `results/test_evaluation.png` is a generated experiment figure, not a screenshot of the hosted application. The PR preview URL above is documented, but it is access protected in a signed-out visit. No interface screenshots are committed. Capture genuine images only after accessing the app; if the preview still requires sign-in, use the local demo and label those captures as local. Do not use a Vercel login page as proof of the interface or call the preview public.
 
 ## Internship-facing project summary
 
