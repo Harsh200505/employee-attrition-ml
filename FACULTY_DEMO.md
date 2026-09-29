@@ -2,15 +2,19 @@
 
 ## Open the demonstration
 
-Open this `employee_turnover` folder in VS Code. In its terminal run:
+Clone or download the repository, open its root folder in VS Code, and complete the environment setup in [README.md](README.md#set-up-on-a-teammates-computer). In a PowerShell terminal at the repository root run:
 
 ```powershell
 .\.mlenv\Scripts\python.exe demo.py
 ```
 
-Open **http://127.0.0.1:8501** in your browser. Keep the terminal running during the presentation. You can instead double-click `RUN_DEMO.cmd` in File Explorer and then open the same address. If the demo is already running, simply open the address; do not start a second copy.
+Open **http://127.0.0.1:8501** in your browser. Keep the terminal running during the presentation. On Windows, you can instead double-click `RUN_DEMO.cmd` after setting up the environment and then open the same address. If the demo is already running, simply open the address; do not start a second copy.
 
 This demo runs entirely on the laptop using the downloaded dataset and installed libraries. Internet access is not needed for training, charts or predictions. Press Ctrl+C in the server terminal when you finish.
+
+## Hosted versus local demo
+
+The Vercel site displays the saved September 16 experiment and computes predictions in the browser with exported Logistic Regression coefficients and preprocessing. Its **View model comparison** button does not retrain. It has no Python server. Use the local demo for the live training step below; if presenting from Vercel, say “saved comparison” and skip the retraining claim. The [PR preview](https://employee-attrition-ml-git-docs-demo-and-resu-e270b6-harsh200505.vercel.app) is Ready in Vercel, but a signed-out visit on 29 September 2026 redirected to Vercel login. Public access and the comparison and prediction controls have not been verified.
 
 ## Five-minute presentation
 
@@ -36,7 +40,7 @@ Explain why Logistic Regression was selected. In the recorded run, it detects 29
 
 ### 5. Demonstrate inference — 60 seconds
 
-Go to **Try a hypothetical employee**. Click **Predict this profile** with the defaults. Then change overtime or another input and predict again. The backend uses the selected fitted model; it is not a rule-based or prewritten answer.
+Go to **Try a hypothetical employee**. Click **Predict this profile** with the defaults. Then change overtime or another input and predict again. In the local demo, Python refits the fixed selected pipeline on the original training split for inference. In the hosted demo, JavaScript evaluates exported coefficients and preprocessing; both compute a score from the entered values.
 
 Defaults are medians and modes from training data, not a real employee. All 28 model inputs are visible or expandable. Keep years-related inputs consistent. Changing one field need not change the predicted label; the model combines all inputs. The score is not a calibrated real-world resignation probability.
 
@@ -45,6 +49,10 @@ Numeric inputs such as income, age, distance and experience are not capped by th
 ### 6. Finish with limitations — 30 seconds
 
 “This is an educational experiment on a small dataset. I have not shown real-world validity, causality, calibration or fairness. False alarms remain substantial. Future work could choose thresholds using training validation and test on another suitable dataset.”
+
+## Screenshots for project proof
+
+Capture the overview, saved model-comparison table, evaluation figure and a submitted hypothetical prediction from an app session you can actually open. The current PR preview prompts for Vercel sign-in in a signed-out browser, so use the local demo for proof until public access and both hosted interactions are checked. If a screenshot claims live retraining, use the local demo after the status says **Live run complete**. Label the hosted comparison as saved results. Show the confusion-matrix counts in a caption: 195 stayed correctly, 52 false alarms, 18 leavers missed and 29 detected. Avoid displaying real employee details or describing the output score as a calibrated probability. See the README for the suggested screenshot order.
 
 ## If faculty ask to see code
 
