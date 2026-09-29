@@ -14,7 +14,7 @@ This demo runs entirely on the laptop using the downloaded dataset and installed
 
 ## Hosted versus local demo
 
-The Vercel site displays the saved September 16 experiment and computes predictions in the browser with exported Logistic Regression coefficients and preprocessing. Its **View model comparison** button does not retrain. It has no Python server. Use the local demo for the live training step below; if presenting from Vercel, say “saved comparison” and skip the retraining claim. The repository does not yet record a verified public Vercel URL.
+The Vercel site displays the saved September 16 experiment and computes predictions in the browser with exported Logistic Regression coefficients and preprocessing. Its **View model comparison** button does not retrain. It has no Python server. Use the local demo for the live training step below; if presenting from Vercel, say “saved comparison” and skip the retraining claim. The [PR preview](https://employee-attrition-ml-git-docs-demo-and-resu-e270b6-harsh200505.vercel.app) is Ready in Vercel, but a signed-out visit on 29 September 2026 redirected to Vercel login. Public access and the comparison and prediction controls have not been verified.
 
 ## Five-minute presentation
 
@@ -52,7 +52,7 @@ Numeric inputs such as income, age, distance and experience are not capped by th
 
 ## Screenshots for project proof
 
-Capture the overview, saved model-comparison table, evaluation figure and a submitted hypothetical prediction. If a screenshot claims live retraining, use the local demo after the status says **Live run complete**. Label the hosted comparison as saved results. Show the confusion-matrix counts in a caption: 195 stayed correctly, 52 false alarms, 18 leavers missed and 29 detected. Avoid displaying real employee details or describing the output score as a calibrated probability. See the README for the suggested screenshot order.
+Capture the overview, saved model-comparison table, evaluation figure and a submitted hypothetical prediction from an app session you can actually open. The current PR preview prompts for Vercel sign-in in a signed-out browser, so use the local demo for proof until public access and both hosted interactions are checked. If a screenshot claims live retraining, use the local demo after the status says **Live run complete**. Label the hosted comparison as saved results. Show the confusion-matrix counts in a caption: 195 stayed correctly, 52 false alarms, 18 leavers missed and 29 detected. Avoid displaying real employee details or describing the output score as a calibrated probability. See the README for the suggested screenshot order.
 
 ## If faculty ask to see code
 
